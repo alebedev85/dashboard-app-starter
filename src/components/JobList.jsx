@@ -1,10 +1,11 @@
 import { JobPosition } from './JobPosition';
-import { useSelector, useDispatch } from "react-redux";
-import {selectAllJobs} from '../store/jobs/jobs-selectors';
+import { useSelector } from "react-redux";
+import {selectVisiblePositions} from '../store/jobs/jobs-selectors';
+import { selectCategores } from 'store/categores/categores-selectors';
 
 const JobList = () => {
-  const dispatch = useDispatch();
-  const allJobs = useSelector(selectAllJobs);
+  const badges = useSelector(selectCategores);
+  const allJobs = useSelector(state => selectVisiblePositions(state, badges));
 
   return (
     <div className='job-list'>
