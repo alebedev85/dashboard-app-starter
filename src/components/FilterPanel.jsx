@@ -25,7 +25,7 @@ const FilterPanel = () => {
             <Badge
               key={badge}
               variant='clearable'
-              onClear={handelDelFilter(badge)}>
+              onClear={() => handelDelFilter(badge)}>
               {badge}
             </Badge>
           ))}

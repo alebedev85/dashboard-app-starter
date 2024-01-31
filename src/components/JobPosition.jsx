@@ -67,7 +67,7 @@ const JobPosition = ({
         </div>
         <Stack>
           {badges.map(item => (
-            <Badge key={item} onClick={onBadgeClick(item)}>{item}</Badge>
+            <Badge key={item} onClick={() => onBadgeClick(item)}>{item}</Badge>
           ))}
         </Stack>
       </div>
