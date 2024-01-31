@@ -1,1 +1,1 @@
-# Job listings with filtering solution
+# Job listings with filtering
