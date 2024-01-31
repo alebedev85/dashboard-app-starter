@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
 
-import { categores } from './categores/categores-reducer';
-import { filters } from './filters/filters-reducer';
+import { categoresReducer } from './categores/categores-reducer';
 import { jobsReducer } from './jobs/jobs-reducer';
 
 export const rootReducer = combineReducers({
-    categores,
-    filters,
+    categores: categoresReducer,
     jobs: jobsReducer
 });

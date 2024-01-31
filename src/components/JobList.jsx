@@ -6,8 +6,6 @@ const JobList = () => {
   const dispatch = useDispatch();
   const allJobs = useSelector(selectAllJobs);
 
-  console.log(allJobs);
-
   return (
     <div className='job-list'>
       {allJobs.map(item => (
