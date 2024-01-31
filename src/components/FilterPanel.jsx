@@ -11,18 +11,22 @@ const FilterPanel = () => {
   const dispatch = useDispatch();
   const badges = useSelector(selectCategores);
 
+  const handelDelFilter = (filter) => {
+    dispatch(delCategore(filter))
+  }
+
   // console.log(badges);
 
   return (
     <Card className="filter-panel">
       <div className="filter-panel-wrapper">
         <Stack>
-          {badges.map(item => (
+          {badges.map(badge => (
             <Badge
-              key={item}
+              key={badge}
               variant='clearable'
-              onClear={() => dispatch(delCategore(item))}>
-              {item}
+              onClear={handelDelFilter(badge)}>
+              {badge}
             </Badge>
           ))}
         </Stack>
