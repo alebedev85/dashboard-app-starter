@@ -1,6 +1,12 @@
 import { ADD_CATEGORE, DEL_CATEGORE, CLEAR_CATEGORE } from './categores-actions';
 
-export const categoresReducer = (state = [], action) => {
+type ActionType = {
+    type: string,
+    payload: string,
+}
+
+
+export const categoresReducer = (state: string[] = [], action: ActionType) => {
     switch (action.type) {
         case ADD_CATEGORE: {
             // console.log('add');
