@@ -1,6 +1,6 @@
 import FilterPanel from 'components/FilterPanel';
 import JobList from 'components/JobList';
-import { TheHeader } from 'components/TheHeader';
+import TheHeader from 'components/TheHeader';
 import data from './mock/data.json';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';

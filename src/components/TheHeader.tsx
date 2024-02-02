@@ -1,7 +1,5 @@
-const TheHeader = () => {
+export default function TheHeader() {
   return (
     <header className='header' />
   )
 }
-
-export {TheHeader};

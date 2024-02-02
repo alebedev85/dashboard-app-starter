@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { ReactComponent as Remove } from '../assets/images/icon-remove.svg';
 
 type BadgeProps = {
