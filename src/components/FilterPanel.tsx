@@ -12,7 +12,6 @@ export default function FilterPanel() {
   const badges = useSelector(selectCategores);
 
   const handelDelFilter = (filter: string) => {
-    console.log('klklk')
     dispatch(delCategore(filter))
   }
 
