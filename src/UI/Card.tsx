@@ -6,7 +6,7 @@ type CardProps = {
   children: ReactNode,
 }
 
-const Card = ({children, isFeatured, className}:CardProps) => {
+export default function Card ({children, isFeatured, className}:CardProps) {
   return (
     <div
       className={
@@ -17,5 +17,3 @@ const Card = ({children, isFeatured, className}:CardProps) => {
     </div>
   )
 }
-
-export {Card};

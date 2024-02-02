@@ -1,7 +1,6 @@
-import { Badge } from 'UI/Badge';
-import { Card } from 'UI/Card';
-import { Stack } from 'UI/Stack';
-import Logo from '../images/account.svg'
+import Badge from 'UI/Badge';
+import Card from 'UI/Card';
+import Stack from 'UI/Stack';
 
 type JobPositionProps = {
   id: number,
@@ -21,7 +20,7 @@ type JobPositionProps = {
 }
 
 
-const JobPosition = ({
+export default function JobPosition ({
   id,
   company,
   logo,
@@ -36,10 +35,8 @@ const JobPosition = ({
   languages,
   tools,
   onBadgeClick
-}: JobPositionProps) => {
+}: JobPositionProps) {
   const badges = [role, level].concat(...languages, ...tools);
-
-  // console.log(logo)
 
   return (
     <Card isFeatured={featured}>
@@ -47,7 +44,7 @@ const JobPosition = ({
         <div className='job-position-info'>
           <img
             className='job-position-avatar'
-            src={Logo}
+            src={process.env.PUBLIC_URL + logo.slice(1)}
             alt={company}
           />
           <div className='job-position-body'>
@@ -93,5 +90,3 @@ const JobPosition = ({
     </Card>
   )
 }
-
-export { JobPosition };

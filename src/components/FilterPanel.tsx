@@ -1,13 +1,13 @@
-import { Badge } from 'UI/Badge';
-import { Card } from 'UI/Card';
-import { Stack } from 'UI/Stack';
+import Badge from 'UI/Badge';
+import Card from 'UI/Card';
+import Stack from 'UI/Stack';
 import { useSelector, useDispatch } from "react-redux";
 import { selectCategores } from 'store/categores/categores-selectors';
 import { delCategore, clearCategore } from '../store/categores/categores-actions'
 
 
 
-const FilterPanel = () => {
+export default function FilterPanel() {
   const dispatch = useDispatch();
   const badges = useSelector(selectCategores);
 
@@ -37,5 +37,3 @@ const FilterPanel = () => {
     </Card>
   )
 }
-
-export { FilterPanel };
